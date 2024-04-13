@@ -1,0 +1,204 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+  
+.flair{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    background: #f0cf7f;
+}
+
+
+
+.text-box{
+    margin: 12%;
+    display: flex;
+    flex-direction: column;
+}
+
+img.logo {
+    max-width: 30%;
+    margin-bottom: 12px;
+    height: auto;
+}
+
+img {
+    width: 100%;
+}
+
+.subheading {
+    color: #846014;
+    font-size: 2vw;
+}
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.function{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form{
+    width: 100%;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "name username"
+        "email email"
+        "password password";
+    column-gap: 10px;
+}
+
+.heading{
+    width: 50%;
+}
+
+.form-element{
+    margin: 20px 0;
+    position: relative;
+    display:inline-block;
+}
+
+.name{
+    grid-area: name;
+}
+
+.username{
+    grid-area: username;
+}
+
+.email{
+    grid-area: email;
+}
+
+.password{
+    grid-area: password;
+}
+
+label {
+    padding: 5px;
+    margin: 5px;
+    pointer-events: none;
+    position:absolute;
+    left:0;
+    top:0;
+    transition: 0.2s;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+    opacity:0.5;
+    background: #f3f3f3;
+}
+
+.input {
+    width: 100%;
+    background-color: #f3f3f3;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input:focus + label, input:not(:placeholder-shown) + label {
+    opacity:1;
+    transform-origin: 0 0;
+    transform: scale(0.65) translateY(-73%) translate(-14px);
+    background: #fff;
+}
+
+input:focus {
+    background-color: #fff;
+}
+
+.agreement{
+    display: flex;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+input[type="checkbox"] {
+    margin: 4px;
+    top: 0;
+    margin-left: 0px;
+    width: 20px;
+    height: 20px;
+    accent-color: #f033c4;
+    cursor: pointer;
+}
+  
+button[type="submit"]{
+    width: 200px;
+    margin-top: 40px;
+    height: 40px;
+    background-color: #ea4b8b;
+    border: 0;
+    border-radius: 10px;
+    font-size: 100%;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ef2576;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .container {
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    img.logo{
+        margin-bottom: 0px;
+        max-width: 20%;
+    }
+
+    .flair{
+        width: 100%;
+    }
+
+    .text-box{
+        margin: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subheading, .flair-image, #credit {
+        display: none;
+    }
+
+    .function{
+        justify-content: start ;
+    }
+
+    .form{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "name"
+            "username"
+            "email"
+            "password";
+    }
+
+    form{
+        align-items: center;
+    }
+}

@@ -1,9 +1,16 @@
 import './static/signup.css'
 import logo from './assets/dribble_logo.png'
 import flairImage from './assets/flair_image.png'
+import { useContext, useState } from 'react'
+import UserContext from '../context'
 
 function Signup(){
-    return (<div className="container">
+    const [email, setEmail] = useContext(UserContext)
+    const [shortpass, setShortpass] = useState(false)
+
+    return (
+    <div className='signup'>
+    <div className="container">
         <div className="flair">
         <div className="text-box">
             <img className="logo" src={logo}/>
@@ -27,13 +34,13 @@ function Signup(){
             </div>
 
             <div className="form-element email">
-                <input className="input" placeholder=""/>
-                <label className="text">Email</label>
+                <input id="email" className="input" placeholder=""/>
+                <label htmlFor="email" className="text">Email</label>
             </div>
 
             <div className="form-element password">
-                <input className="input" placeholder=""/>
-                <label className="text">Password</label>
+                <input type="password" id="password" className="input" placeholder=""/>
+                <label htmlFor="password" className="text">Password</label>
             </div>
             </div>
 
@@ -50,6 +57,7 @@ function Signup(){
         </form>
         <p className="text" style={{"textAlign":"center"}}>Already a member? <span style={{"color":"purple"}}>Sign In</span></p>
         </div>
+    </div>
     </div>)
 }
 

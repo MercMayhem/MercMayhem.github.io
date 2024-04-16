@@ -6,3 +6,15 @@
 .logo {
     width: 15%;
 }
+
+@media (max-aspect-ratio: 1/1){
+    .logo img{
+        margin: 2%
+    }
+
+    .logo{
+        text-align: center;
+        margin-top: 3%;
+        width: 40%;
+    }
+}

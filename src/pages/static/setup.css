@@ -6,4 +6,11 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
+    overflow: scroll;
+}
+
+@media (max-aspect-ratio: 1/1){
+    .setup .container{
+        align-items: center;
+    }
 }

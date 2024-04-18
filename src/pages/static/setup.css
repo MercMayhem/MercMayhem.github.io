@@ -1,0 +1,16 @@
+.setup .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+}
+
+@media (max-aspect-ratio: 1/1){
+    .setup .container{
+        align-items: center;
+    }
+}

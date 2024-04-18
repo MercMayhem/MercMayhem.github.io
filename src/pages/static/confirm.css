@@ -1,0 +1,91 @@
+.confirmation{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar .img-box{
+    margin: 20px;
+    width: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar .img{
+    width: 100%;
+}
+
+.navbar .nav-link{
+    width: 7%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar .nav-link-text{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    transition: font-size 0.3s;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.nav-break{
+    width: 100%;
+    opacity: 0.4;
+}
+
+.confirm-content-container{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: scroll;
+}
+
+.confirm-content{
+    height: 70%;
+    overflow-wrap: normal;
+    width: 60%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+.confirm-content img{
+    height: 15%;
+    width: auto;
+}
+
+@media (max-aspect-ratio: 1/1){
+    .confirmation{
+        flex-direction: row;
+    }
+
+    .navbar{
+        flex-direction: column;
+        width: 50%;
+        align-items: center;
+    }
+
+    .nav-break{
+        width: unset;
+    }
+
+    .navbar .img-box{
+        width: auto;
+    }
+}

@@ -1,9 +1,28 @@
 import './static/signup.css'
 import logo from './assets/dribble_logo.png'
 import flairImage from './assets/flair_image.png'
+import { useContext, useState } from 'react'
+import UserContext from '../context'
+import { useNavigate } from 'react-router-dom'
 
 function Signup(){
-    return (<div className="container">
+    const [email, setEmail] = useContext(UserContext)
+    const [password, setPassword] = useState("")
+    let navigate = useNavigate();
+
+    let submitHandler = (e) => {
+        e.preventDefault();
+        navigate('/setup');
+    }
+
+    let inputChangeHandler = (target, setInp) => {
+        setInp(target.value);
+        target.setCustomValidity("");
+    }
+
+    return (
+    <div className='signup'>
+    <div className="container">
         <div className="flair">
         <div className="text-box">
             <img className="logo" src={logo}/>
@@ -14,32 +33,45 @@ function Signup(){
         </div>
         <div className="function">
         <h1 className="text heading">Sign up to Dribbble</h1>
-        <form>
+        <form onSubmit={submitHandler}>
             <div className="form">
             <div className="form-element name">
-                <input className="input" placeholder=""/>
+                <input required className="input" placeholder=""/>
                 <label className="text">Name</label>
             </div>
 
             <div className="form-element username">
-                <input className="input" placeholder=""/>
+                <input required className="input" placeholder=""/>
                 <label className="text">Username</label>
             </div>
 
             <div className="form-element email">
-                <input className="input" placeholder=""/>
+                
+                <input required type='email' 
+                    value={ email } 
+                    onChange={ (e) => { inputChangeHandler(e.target, setEmail) } } 
+                    onInvalid={(e)=>{e.target.setCustomValidity("Please enter your email")}}
+                    className="input" placeholder=""/>
+                
                 <label className="text">Email</label>
             </div>
 
             <div className="form-element password">
-                <input className="input" placeholder=""/>
+
+                <input required type="password"
+                    value = { password }
+                    pattern = ".{6,}"
+                    onChange = { (e) => { inputChangeHandler(e.target, setPassword) } }
+                    onInvalid = { (e) => { e.target.setCustomValidity("Password should be atleast 6 characters long") } }
+                    className="input" placeholder=""/>
+
                 <label className="text">Password</label>
             </div>
             </div>
 
             <div className="agreement">
             <div style={{"position":"relative","width":"12%"}}>
-                <input type="checkbox"/>
+                <input required type="checkbox"/>
             </div>
             <p className="text" style={{"marginTop":"0","marginBottom":"0"}}><span style={{"color":"gray"}}>Creating an account means that you are okay with our <span style={{"color":"purple"}}>Terms of Service</span>, <span style={{"color":"purple"}}>Privacy Policy</span>, and our default <span style={{"color":"purple"}}>Notification Settings</span> </span></p>
             </div>
@@ -50,6 +82,7 @@ function Signup(){
         </form>
         <p className="text" style={{"textAlign":"center"}}>Already a member? <span style={{"color":"purple"}}>Sign In</span></p>
         </div>
+    </div>
     </div>)
 }
 

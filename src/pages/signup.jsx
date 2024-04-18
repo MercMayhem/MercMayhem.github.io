@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 
 function Signup(){
     const [email, setEmail] = useContext(UserContext)
-    const [password, setPassword] = useState(false)
+    const [password, setPassword] = useState("")
     let navigate = useNavigate();
 
     let submitHandler = (e) => {

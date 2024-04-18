@@ -18,7 +18,7 @@ function ConfirmContent(){
                 <p style={{textAlign: "center"}}>Didn't receive the email? Check your Spam folder, it may have been caught by a filter. If you still don't see it
                     , you can <span style={{color: "#E039A5"}}>resend the confirmation email.</span>
                 </p>
-                <p>Wrong email address? <span style={{color: "#E039A5"}}>Change it.</span></p>
+                <p style={{textAlign: 'center'}}>Wrong email address? <span style={{color: "#E039A5"}}>Change it.</span></p>
             </div>
 
         </div>

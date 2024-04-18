@@ -2,6 +2,7 @@ import '../../static/info.css'
 import Pic from './profilepic'
 import Location from './location'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Info(){
     const [pic, setPic] = useState(false);
@@ -10,6 +11,7 @@ function Info(){
     const allSet = {
         width: "200px",
         marginTop: "40px",
+        marginBottom: "5px",
         height: "40px",
         backgroundColor: "#ea4b8b",
         border: "0",
@@ -21,9 +23,15 @@ function Info(){
         fontSize: "14px"
     }
 
+    const navigate = useNavigate();
+
     const allNotSet={
         ...allSet,
         backgroundColor: "#F192B8",
+    }
+
+    const nextClickHandler = () => {
+        navigate('/setup2')
     }
 
     return(
@@ -40,7 +48,7 @@ function Info(){
 
                 <Location setLocation={ setLocation }/>
 
-                <button style={ (pic && location)? allSet : allNotSet}>Next</button>
+                <button style={ (pic && location)? allSet : allNotSet} onClick={ nextClickHandler }>Next</button>
 
             </div>
 

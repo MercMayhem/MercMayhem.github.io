@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/signup-page/static/css/main.2a6f26b8.css",
+    "main.js": "/signup-page/static/js/main.10af11da.js",
+    "static/media/design.png": "/signup-page/static/media/design.5b2f264926d7f114ba3c.png",
+    "static/media/hire.png": "/signup-page/static/media/hire.fd0eeee7d09f9f909b53.png",
+    "static/media/flair_image.png": "/signup-page/static/media/flair_image.0f351e04623a42272085.png",
+    "static/media/idea.png": "/signup-page/static/media/idea.20cef4622e64e8b3bb8f.png",
+    "static/media/Email confirmation.png": "/signup-page/static/media/Email confirmation.2f6ae9593d1deb2d3147.png",
+    "static/media/dribble_logo.png": "/signup-page/static/media/dribble_logo.c2b037d6b1da1cdfb3f7.png",
+    "index.html": "/signup-page/index.html",
+    "static/media/Back Arrow.svg": "/signup-page/static/media/Back Arrow.94c7a9d36f6a52f30854fde69f36751f.svg",
+    "main.2a6f26b8.css.map": "/signup-page/static/css/main.2a6f26b8.css.map",
+    "main.10af11da.js.map": "/signup-page/static/js/main.10af11da.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2a6f26b8.css",
+    "static/js/main.10af11da.js"
+  ]
+}
